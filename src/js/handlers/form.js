@@ -12,17 +12,13 @@ function handleSearch(event) {
   if(!userQuery) {
     return noFoundQuery();
   }
-  console.log(userQuery);
 
   getImages(userQuery)
     .then(images => {
-      // console.dir(images);
       if(!images.total) {
         return noFoundImages();
       }
-      console.log(images.hits);
       refs.gallery.innerHTML = createCardsMarkup(images.hits);
-
   })
     .catch(error => {
       console.log(error);
