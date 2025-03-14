@@ -1,3 +1,6 @@
+@import url("simplelightbox/dist/simple-lightbox.min.css");
+
+
 .container.search {
   display: flex;
   flex-direction: column;
@@ -5,10 +8,11 @@
   align-items: center;
 }
 
-form {
+.search-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .search-input {
@@ -55,4 +59,38 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.gallery {
+  display: grid;
+  /*grid-template-columns: repeat(3, 1fr);*/
+  /*!*grid-template-rows: repeat(3, 1fr);*!*/
+  gap: 12px;
+}
+
+.gallery-img {
+  width: 360px;
+  height: 200px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1128px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
 }
