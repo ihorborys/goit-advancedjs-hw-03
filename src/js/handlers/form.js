@@ -1,6 +1,6 @@
-import { getImages } from '../services/pixabay-api.js';
+import { getImages } from '../pixabay-api.js';
 import { noFoundImages, noFoundQuery } from '../services/izitoast.js';
-import { createCardsMarkup } from '../utils/render-functions.js';
+import { createCardsMarkup } from '../render-functions.js';
 import { ACTIVE_CLASS, refs } from '../utils/consts.js';
 import { lightBox } from '../services/simplelightbox.js';
 
