@@ -5,7 +5,6 @@ import { ACTIVE_CLASS, refs } from '../utils/consts.js';
 import { lightBox } from '../services/simplelightbox.js';
 
 
-
 function handleSearch(event) {
   event.preventDefault();
 
